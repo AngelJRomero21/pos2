@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #e3f2fd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #007bff;
+    position: relative;
+}
+h1::after {
+    content: "💳";
+    font-size: 1.5rem;
+    position: absolute;
+    right: -40px;
+    top: 0;
+    animation: rotateEmoji 2s infinite linear;
+}
+@keyframes rotateEmoji {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+input[type="password"], input[type="text"] {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+input[type="password"]:focus, input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+    transition: background-color 0.3s, transform 0.3s;
+}
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+#logo {
+    margin-top: 20px;
+    max-width: 100px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+#history {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+    text-align: left;
+    font-size: 14px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+#history h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.transaction {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+.transaction .amount {
+    color: #28a745;
+    font-weight: bold;
+}
+.transaction .status {
+    font-style: italic;
+    color: #555;
+}
+#logout {
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #dc3545;
+    cursor: pointer;
+    text-decoration: underline;
+}
+#remember-container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 20px;
+}
+#remember-container input[type="checkbox"] {
+    margin-right: 10px;
+}
+#export-pdf, #export-txt {
+    background-color: #28a745;
+    margin-top: 10px;
+    color: white;
+}
+#export-pdf:hover, #export-txt:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        padding: 20px;
+        border-radius: 10px;
+    }
+}
